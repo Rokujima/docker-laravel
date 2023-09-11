@@ -8,6 +8,8 @@ services:
     restart: unless-stopped
     env_file:
       - ./volumes/apps/.env
+    volumes: 
+      - ./volumes/apps/.env:/var/www/.env
     depends_on:
       - mysql
       - redis
