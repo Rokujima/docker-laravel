@@ -1,0 +1,747 @@
+{
+	"info": {
+		"_postman_id": "72661a47-8364-44d9-b25b-415e1b2b8d6f",
+		"name": "Test Order Online",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1805243"
+	},
+	"item": [
+		{
+			"name": "Mini Project",
+			"item": [
+				{
+					"name": "Upload File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Documents/sample_upload.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/mini-project/upload-file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mini-project",
+								"upload-file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View History Upload",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/mini-project/history",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mini-project",
+								"history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Product Upload",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/mini-project/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mini-project",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Question 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/test/one",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"test",
+						"one"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Body Form Data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "array",
+									"value": "[\"AB\", [\"XY\"], [\"YP\"]]",
+									"type": "text"
+								},
+								{
+									"key": "findChar",
+									"value": "Y",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/test/one",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"test",
+								"one"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:24:57 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:24:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"input\": \"[\\\"AB\\\", [\\\"XY\\\"], [\\\"YP\\\"]]\",\n        \"find\": \"Y\",\n        \"output\": 4\n    }\n}"
+				},
+				{
+					"name": "Success Body Raw Json",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"array\": \"[\\\"AB\\\", [\\\"XY\\\"], [\\\"YP\\\"]]\",\r\n    \"findChar\": \"Y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/test/one",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"test",
+								"one"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:25:24 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:25:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"input\": \"[\\\"AB\\\", [\\\"XY\\\"], [\\\"YP\\\"]]\",\n        \"find\": \"Y\",\n        \"output\": 4\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Question 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "input",
+							"value": "<i sc-root=”Hello”>World</i>\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/test/two",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"test",
+						"two"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Form Data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "input",
+									"value": "<i sc-root=”Hello”>World</i>\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/test/two",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"test",
+								"two"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:34:19 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:34:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"root\": \"\"\n    }\n}"
+				},
+				{
+					"name": "Success Raw Json",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"input\":\"<i sc-root=\\\"Hello\\\">World</i>\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/test/two",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"test",
+								"two"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:35:11 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:35:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"root\": \"Hello\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Question 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"palindrom\",\r\n    \"pattern\":\"ind\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/test/three",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"test",
+						"three"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Body Form Data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "text",
+									"value": "palindrom",
+									"type": "text"
+								},
+								{
+									"key": "pattern",
+									"value": "ind",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/test/three",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"test",
+								"three"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:37:13 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:37:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"Text\": \"palindrom\",\n        \"Pattern\": \"ind\",\n        \"Output\": 1\n    }\n}"
+				},
+				{
+					"name": "Success Body Raw Json",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"palindrom\",\r\n    \"pattern\":\"ind\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/test/three",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"test",
+								"three"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:38:20 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:38:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"Text\": \"palindrom\",\n        \"Pattern\": \"ind\",\n        \"Output\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Question 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/test/four",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"test",
+						"four"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "View Answer Question 4",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/test/four",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"test",
+								"four"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:39:07 +0000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Sep 2023 09:39:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.26"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6IjBJRHFLek1ZSEZ2SHpZWUNOdmI3YVE9PSIsInZhbHVlIjoibWMzNG9rNXRHenhobHVsbkpjazlzb2ZCRDNKTnhqZDJyZUVVZGdJTmRQYnlneW5OS0FwcGd5VEJyWFYzUjQ1OSIsIm1hYyI6ImM4YWE4MWNhMzEwZDc3ZjE5MzFkZjRhY2Y3YTkxMzk5ODY2YTY3OTNjOTA1MWNiY2UzYjRjYWVkZjg1ZmI4ZjIifQ%3D%3D; expires=Mon, 11-Sep-2023 11:39:07 GMT; Max-Age=7200; path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "laravel_session=eyJpdiI6Im1Va0orZG1SN3JsZTdkaE9yNFVxaHc9PSIsInZhbHVlIjoiTkU4Vm1xSWdXdDZxOFBvMXlJckdaSlNwQ0xxS25hXC9KZk1VTzh1QVhoUUdPeHBWS1pmY2ZtZ0hqZWNBSUtOQXUiLCJtYWMiOiI0OTQ4YjEzYjdkNWNiZDZhODdkMDRhOWVlN2Q5Njg0YTMyNmM0ODVhZDk5ODA2MmY5YjE4YzhlYjg3ZTlmNjQ1In0%3D; expires=Mon, 11-Sep-2023 11:39:07 GMT; Max-Age=7200; path=/; httponly"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <title>Test - Khaerul Umam</title>\n        <!-- Fonts -->\n        <link href=\"https://fonts.googleapis.com/css?family=Nunito:200,600\" rel=\"stylesheet\">\n        <!-- Styles -->\n        <style>\r\n            html, body {\r\n                background-color: #fff;\r\n                color: #636b6f;\r\n                font-family: 'Nunito', sans-serif;\r\n                font-weight: 200;\r\n                height: 100vh;\r\n                margin: 0;\r\n            }\r\n\r\n            .full-height {\r\n                height: 100vh;\r\n            }\r\n\r\n            .flex-center {\r\n                align-items: center;\r\n                display: flex;\r\n                justify-content: center;\r\n            }\r\n\r\n            .position-ref {\r\n                position: relative;\r\n            }\r\n\r\n            .top-right {\r\n                position: absolute;\r\n                right: 10px;\r\n                top: 18px;\r\n            }\r\n\r\n            .content {\r\n                text-align: center;\r\n            }\r\n\r\n            .title {\r\n                font-size: 84px;\r\n            }\r\n\r\n            .links > a {\r\n                color: #636b6f;\r\n                padding: 0 25px;\r\n                font-size: 13px;\r\n                font-weight: 600;\r\n                letter-spacing: .1rem;\r\n                text-decoration: none;\r\n                text-transform: uppercase;\r\n            }\r\n\r\n            .form {\r\n                padding: 0 25px;\r\n                text-align: center;\r\n                margin-bottom: 100px;\r\n            }\r\n\r\n            .m-b-md {\r\n                margin-bottom: 30px;\r\n            }\r\n        </style>\n    </head>\n    <body>\n        <div class=\"flex-center position-ref full-height\">\n            <div class=\"content\">\n                <div class=\"title m-b-md\">\r\n                    App Test Four\r\n                </div>\n                <textarea readonly=true style=\"width: 1442px; height: 594px;\">\r\n                //Create Abstract Ship\r\n\r\n                abstract class Ship\r\n                {\r\n                    protected $name;\r\n                    protected $length;\r\n                    protected $manufacturer;\r\n\r\n                    public function __construct($name, $length, $manufacturer)\r\n                    {\r\n                        $this->name = $name;\r\n                        $this->length = $length;\r\n                        $this->manufacturer = $manufacturer;\r\n                    }\r\n\r\n                    abstract public function startEngine();\r\n\r\n                    public function getInfo()\r\n                    {\r\n                        return \"Name: {$this->name}, Length: {$this->length} meters, Manufacturer: {$this->manufacturer}\";\r\n                    }\r\n                }\r\n\r\n                //Create Class MotorBoat extend ship class\r\n\r\n                class MotorBoat extends Ship\r\n                {\r\n                    private $engineType;\r\n\r\n                    public function __construct($name, $length, $manufacturer, $engineType)\r\n                    {\r\n                        parent::__construct($name, $length, $manufacturer);\r\n                        $this->engineType = $engineType;\r\n                    }\r\n\r\n                    public function startEngine()\r\n                    {\r\n                        return \"Starting the {$this->engineType} engine of the motor boat.\";\r\n                    }\r\n                }\r\n\r\n\r\n                //Create Class Sailboat\r\n\r\n                class Sailboat extends Ship\r\n                {\r\n                    private $sailCount;\r\n\r\n                    public function __construct($name, $length, $manufacturer, $sailCount)\r\n                    {\r\n                        parent::__construct($name, $length, $manufacturer);\r\n                        $this->sailCount = $sailCount;\r\n                    }\r\n\r\n                    public function startEngine()\r\n                    {\r\n                        return \"Sailboats do not have engines.\";\r\n                    }\r\n\r\n                    public function getSailCount()\r\n                    {\r\n                        return $this->sailCount;\r\n                    }\r\n                }\r\n\r\n                // Create Class Yacht\r\n\r\n                class Yacht extends Ship\r\n                {\r\n                    private $luxuryFeatures;\r\n\r\n                    public function __construct($name, $length, $manufacturer, $luxuryFeatures)\r\n                    {\r\n                        parent::__construct($name, $length, $manufacturer);\r\n                        $this->luxuryFeatures = $luxuryFeatures;\r\n                    }\r\n\r\n                    public function startEngine()\r\n                    {\r\n                        return \"Starting the yacht's engine.\";\r\n                    }\r\n\r\n                    public function getLuxuryFeatures()\r\n                    {\r\n                        return $this->luxuryFeatures;\r\n                    }\r\n                }\r\n\r\n\r\n                    \r\n                </textarea>\n                <div class=\"links\">\n                    <a href=\"http://localhost:8000/test/one\">Test 1</a>\n                    <a href=\"http://localhost:8000/test/two\">Test 2</a>\n                    <a href=\"http://localhost:8000/test/three\">Test 3</a>\n                    <a href=\"http://localhost:8000/test/four\">Test 4</a>\n                    <a href=\"http://localhost:8000/mini-project\">Mini Project</a>\n                    <a href=\"https://github.com/laravel/laravel\">GitHub</a>\n                </div>\n                <div class=\"ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0\">\r\n                        Laravel v5.7.29 (PHP v7.1.26)\r\n                </div>\n            </div>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "port",
+			"value": "8000",
+			"type": "string"
+		}
+	]
+}

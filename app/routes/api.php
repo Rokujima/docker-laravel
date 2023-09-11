@@ -30,7 +30,7 @@ Route::prefix('test')->group(function(){
 });
 
 Route::prefix('mini-project')->group(function() {
-    Route::post('upload-file');
-    Route::get('history', [MiniProjectController::class, 'show']);
-    Route::get('download-product');
+    Route::post('upload-file', [MiniProjectController::class, 'import']);
+    Route::get('history', [MiniProjectController::class, 'history']);
+    Route::get('product', [MiniProjectController::class, 'product']);
 });

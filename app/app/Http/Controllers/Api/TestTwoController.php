@@ -9,7 +9,6 @@ class TestTwoController extends MainController
     
     public function main(Request $request){
         $html = $request->input;
-
         $array = $this->extract_scheme_names($html);
         return $this->respondSuccess($this->attribute_to_find($html, $array));
     }
@@ -17,7 +16,7 @@ class TestTwoController extends MainController
     function extract_scheme_names($html) {
         $pattern = '/\s+sc-([\w-]+)/';
         preg_match_all($pattern, $html, $matches);
-        
+       
         return array_unique(end($matches));
     }
 
